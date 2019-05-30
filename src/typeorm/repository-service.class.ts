@@ -365,7 +365,7 @@ export class RepositoryService<T> extends RestfulService<T> {
     switch (relationType) {
       case 'many-to-one':
       case 'one-to-one':
-        return 'innerJoin';
+        return 'leftJoin';
 
       default:
         return 'leftJoin';
