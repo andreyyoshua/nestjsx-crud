@@ -706,12 +706,12 @@ import {
   ValidateNested,
 } from 'class-validator';
 import { Type } from 'class-transformer';
-import { CrudValidate } from '@nestjsx/crud';
+import { CrudValidationGroups } from '@nestjsx/crud';
 
 import { BaseEntity } from '../base-entity';
 import { UserProfile } from '../users-profiles/user-profile.entity';
 
-const { CREATE, UPDATE } = CrudValidate;
+const { CREATE, UPDATE } = CrudValidationGroups;
 
 @Entity('users')
 export class User extends BaseEntity {
@@ -743,7 +743,7 @@ export class User extends BaseEntity {
 }
 ```
 
-You can import `CrudValidate` enum and set up validation rules for each field on firing of `POST`, `PATCH` requests or both of them.
+You can import `CrudValidationGroups` enum and set up validation rules for each field on firing of `POST`, `PATCH` requests or both of them.
 
 You can pass you custom validation options here:
 
